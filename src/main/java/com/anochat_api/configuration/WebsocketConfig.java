@@ -7,7 +7,7 @@ import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
 import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
 
-import com.anochat_api.handler.MessageHandler;
+import com.anochat_api.handler.ChatHandler;
 
 /**
  * WebSocketのハンドラー
@@ -21,18 +21,18 @@ public class WebsocketConfig implements WebSocketConfigurer  {
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(messageHandler(), "/ws-connect")	// 「通信ハンドラー」と「初回接続パス」の設定
+        registry.addHandler(chatHandler(), "/ws-connect")	// 「通信ハンドラー」と「初回接続パス」の設定
                 .setAllowedOrigins("localhost:8080")			// CORSの設定
                 .withSockJS();									// SockJSを有効にする
     }
 
     /**
-     * 実体は「MessageHandler」クラス
+     * 実体は「chatHandler」クラス
      * Beanは特定の規則に準じたクラス
      * @return
      */
     @Bean
-    public WebSocketHandler messageHandler() {
-        return new MessageHandler();
+    public WebSocketHandler chatHandler() {
+        return new ChatHandler();
     }
 }
