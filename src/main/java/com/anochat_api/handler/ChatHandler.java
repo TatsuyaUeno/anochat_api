@@ -15,6 +15,7 @@ import com.anochat_api.logic.ChatLogic;
 
 /**
  * WebSocketに接続した際呼び出される
+ * WebSocket通信の処理はこのクラス
  * 各ブラウザのセッションから、双方向通信を実装
  * @author tatsu
  *

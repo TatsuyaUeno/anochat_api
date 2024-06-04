@@ -1,0 +1,168 @@
+2024-05-30 23:06:32.460 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:50 - Starting AnochatApiApplication using Java 17.0.10 with PID 28935 (/home/tatsu/lt_chat/anochat_api/target/classes started by tatsu in /home/tatsu/lt_chat/anochat_api)
+2024-05-30 23:06:32.475 [DEBUG] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:51 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-30 23:06:32.477 [INFO ] [restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo:660 - The following 1 profile is active: "develop"
+2024-05-30 23:06:36.505 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarted:56 - Started AnochatApiApplication in 5.241 seconds (process running for 6.319)
+2024-05-30 23:06:41.125 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:50 - Starting AnochatApiApplication using Java 17.0.10 with PID 28935 (/home/tatsu/lt_chat/anochat_api/target/classes started by tatsu in /home/tatsu/lt_chat/anochat_api)
+2024-05-30 23:06:41.126 [DEBUG] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:51 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-30 23:06:41.127 [INFO ] [restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo:660 - The following 1 profile is active: "develop"
+2024-05-30 23:06:41.703 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarted:56 - Started AnochatApiApplication in 0.637 seconds (process running for 11.517)
+2024-05-30 23:06:43.185 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:50 - Starting AnochatApiApplication using Java 17.0.10 with PID 28935 (/home/tatsu/lt_chat/anochat_api/target/classes started by tatsu in /home/tatsu/lt_chat/anochat_api)
+2024-05-30 23:06:43.185 [DEBUG] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:51 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-30 23:06:43.186 [INFO ] [restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo:660 - The following 1 profile is active: "develop"
+2024-05-30 23:06:43.620 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarted:56 - Started AnochatApiApplication in 0.478 seconds (process running for 13.433)
+2024-05-30 23:08:50.284 [INFO ] [http-nio-8080-exec-4] com.anochat_api.handler.ChatHandler.handleTextMessage:48 - メッセージが送信されました
+2024-05-30 23:08:50.285 [INFO ] [http-nio-8080-exec-4] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:08:50.536 [DEBUG] [http-nio-8080-exec-4] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:08:50.567 [DEBUG] [http-nio-8080-exec-4] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 1(String)
+2024-05-30 23:08:50.591 [DEBUG] [http-nio-8080-exec-4] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:08:57.633 [INFO ] [http-nio-8080-exec-2] com.anochat_api.handler.ChatHandler.handleTextMessage:48 - メッセージが送信されました
+2024-05-30 23:08:57.634 [INFO ] [http-nio-8080-exec-2] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:08:57.636 [DEBUG] [http-nio-8080-exec-2] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:08:57.637 [DEBUG] [http-nio-8080-exec-2] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 2(String)
+2024-05-30 23:08:57.638 [DEBUG] [http-nio-8080-exec-2] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:09:40.787 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:50 - Starting AnochatApiApplication using Java 17.0.10 with PID 28935 (/home/tatsu/lt_chat/anochat_api/target/classes started by tatsu in /home/tatsu/lt_chat/anochat_api)
+2024-05-30 23:09:40.788 [DEBUG] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:51 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-30 23:09:40.789 [INFO ] [restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo:660 - The following 1 profile is active: "develop"
+2024-05-30 23:09:41.178 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarted:56 - Started AnochatApiApplication in 0.44 seconds (process running for 190.992)
+2024-05-30 23:10:10.684 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:50 - Starting AnochatApiApplication using Java 17.0.10 with PID 28935 (/home/tatsu/lt_chat/anochat_api/target/classes started by tatsu in /home/tatsu/lt_chat/anochat_api)
+2024-05-30 23:10:10.684 [DEBUG] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:51 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-30 23:10:10.685 [INFO ] [restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo:660 - The following 1 profile is active: "develop"
+2024-05-30 23:10:11.100 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarted:56 - Started AnochatApiApplication in 0.451 seconds (process running for 220.914)
+2024-05-30 23:11:15.056 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:50 - Starting AnochatApiApplication using Java 17.0.10 with PID 28935 (/home/tatsu/lt_chat/anochat_api/target/classes started by tatsu in /home/tatsu/lt_chat/anochat_api)
+2024-05-30 23:11:15.057 [DEBUG] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:51 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-30 23:11:15.057 [INFO ] [restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo:660 - The following 1 profile is active: "develop"
+2024-05-30 23:11:15.439 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarted:56 - Started AnochatApiApplication in 0.409 seconds (process running for 285.253)
+2024-05-30 23:17:00.624 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:50 - Starting AnochatApiApplication using Java 17.0.10 with PID 42047 (/home/tatsu/lt_chat/anochat_api/target/classes started by tatsu in /home/tatsu/lt_chat/anochat_api)
+2024-05-30 23:17:00.630 [DEBUG] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:51 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-30 23:17:00.632 [INFO ] [restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo:660 - The following 1 profile is active: "develop"
+2024-05-30 23:17:03.127 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarted:56 - Started AnochatApiApplication in 3.056 seconds (process running for 3.531)
+2024-05-30 23:18:50.169 [INFO ] [http-nio-8080-exec-3] com.anochat_api.handler.ChatHandler.handleTextMessage:49 - メッセージが送信されました
+2024-05-30 23:18:50.171 [INFO ] [http-nio-8080-exec-3] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:18:50.420 [DEBUG] [http-nio-8080-exec-3] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:18:50.445 [DEBUG] [http-nio-8080-exec-3] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 1(String)
+2024-05-30 23:18:50.449 [DEBUG] [http-nio-8080-exec-3] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:19:43.517 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:50 - Starting AnochatApiApplication using Java 17.0.10 with PID 45238 (/home/tatsu/lt_chat/anochat_api/target/classes started by tatsu in /home/tatsu/lt_chat/anochat_api)
+2024-05-30 23:19:43.521 [DEBUG] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:51 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-30 23:19:43.522 [INFO ] [restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo:660 - The following 1 profile is active: "develop"
+2024-05-30 23:19:46.342 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarted:56 - Started AnochatApiApplication in 3.5 seconds (process running for 3.984)
+2024-05-30 23:22:28.000 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:50 - Starting AnochatApiApplication using Java 17.0.10 with PID 45238 (/home/tatsu/lt_chat/anochat_api/target/classes started by tatsu in /home/tatsu/lt_chat/anochat_api)
+2024-05-30 23:22:28.001 [DEBUG] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:51 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-30 23:22:28.002 [INFO ] [restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo:660 - The following 1 profile is active: "develop"
+2024-05-30 23:22:28.698 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarted:56 - Started AnochatApiApplication in 0.748 seconds (process running for 166.34)
+2024-05-30 23:23:20.290 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:50 - Starting AnochatApiApplication using Java 17.0.10 with PID 45238 (/home/tatsu/lt_chat/anochat_api/target/classes started by tatsu in /home/tatsu/lt_chat/anochat_api)
+2024-05-30 23:23:20.290 [DEBUG] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:51 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-30 23:23:20.291 [INFO ] [restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo:660 - The following 1 profile is active: "develop"
+2024-05-30 23:23:20.890 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarted:56 - Started AnochatApiApplication in 0.658 seconds (process running for 218.533)
+2024-05-30 23:25:19.569 [INFO ] [http-nio-8080-exec-4] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:25:19.569 [INFO ] [http-nio-8080-exec-4] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:25:19.840 [DEBUG] [http-nio-8080-exec-4] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:25:19.859 [DEBUG] [http-nio-8080-exec-4] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 112111111234(String)
+2024-05-30 23:25:19.867 [DEBUG] [http-nio-8080-exec-4] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:47:34.231 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:50 - Starting AnochatApiApplication using Java 17.0.10 with PID 45238 (/home/tatsu/lt_chat/anochat_api/target/classes started by tatsu in /home/tatsu/lt_chat/anochat_api)
+2024-05-30 23:47:34.231 [DEBUG] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:51 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-30 23:47:34.232 [INFO ] [restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo:660 - The following 1 profile is active: "develop"
+2024-05-30 23:47:34.761 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarted:56 - Started AnochatApiApplication in 0.572 seconds (process running for 1672.404)
+2024-05-30 23:47:43.135 [INFO ] [http-nio-8080-exec-8] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:47:43.136 [INFO ] [http-nio-8080-exec-8] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:47:43.176 [DEBUG] [http-nio-8080-exec-8] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:47:43.177 [DEBUG] [http-nio-8080-exec-8] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 112(String)
+2024-05-30 23:47:43.187 [DEBUG] [http-nio-8080-exec-8] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:49:18.924 [INFO ] [http-nio-8080-exec-2] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:49:18.926 [INFO ] [http-nio-8080-exec-2] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:49:18.929 [DEBUG] [http-nio-8080-exec-2] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:49:18.930 [DEBUG] [http-nio-8080-exec-2] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 112(String)
+2024-05-30 23:49:18.932 [DEBUG] [http-nio-8080-exec-2] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:49:21.223 [INFO ] [http-nio-8080-exec-3] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:49:21.223 [INFO ] [http-nio-8080-exec-3] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:49:21.225 [DEBUG] [http-nio-8080-exec-3] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:49:21.225 [DEBUG] [http-nio-8080-exec-3] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 112(String)
+2024-05-30 23:49:21.227 [DEBUG] [http-nio-8080-exec-3] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:49:21.280 [INFO ] [http-nio-8080-exec-4] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:49:21.281 [INFO ] [http-nio-8080-exec-4] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:49:21.281 [DEBUG] [http-nio-8080-exec-4] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:49:21.282 [DEBUG] [http-nio-8080-exec-4] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 112(String)
+2024-05-30 23:49:21.283 [DEBUG] [http-nio-8080-exec-4] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:49:22.326 [INFO ] [http-nio-8080-exec-5] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:49:22.326 [INFO ] [http-nio-8080-exec-5] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:49:22.327 [DEBUG] [http-nio-8080-exec-5] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:49:22.328 [DEBUG] [http-nio-8080-exec-5] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 112(String)
+2024-05-30 23:49:22.330 [DEBUG] [http-nio-8080-exec-5] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:49:22.951 [INFO ] [http-nio-8080-exec-6] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:49:22.951 [INFO ] [http-nio-8080-exec-6] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:49:22.953 [DEBUG] [http-nio-8080-exec-6] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:49:22.953 [DEBUG] [http-nio-8080-exec-6] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 112(String)
+2024-05-30 23:49:22.958 [DEBUG] [http-nio-8080-exec-6] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:49:23.398 [INFO ] [http-nio-8080-exec-7] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:49:23.398 [INFO ] [http-nio-8080-exec-7] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:49:23.399 [DEBUG] [http-nio-8080-exec-7] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:49:23.399 [DEBUG] [http-nio-8080-exec-7] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 112(String)
+2024-05-30 23:49:23.400 [DEBUG] [http-nio-8080-exec-7] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:49:23.839 [INFO ] [http-nio-8080-exec-8] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:49:23.839 [INFO ] [http-nio-8080-exec-8] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:49:23.839 [DEBUG] [http-nio-8080-exec-8] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:49:23.840 [DEBUG] [http-nio-8080-exec-8] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 112(String)
+2024-05-30 23:49:23.841 [DEBUG] [http-nio-8080-exec-8] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:49:24.402 [INFO ] [http-nio-8080-exec-9] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:49:24.403 [INFO ] [http-nio-8080-exec-9] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:49:24.404 [DEBUG] [http-nio-8080-exec-9] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:49:24.405 [DEBUG] [http-nio-8080-exec-9] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 112(String)
+2024-05-30 23:49:24.407 [DEBUG] [http-nio-8080-exec-9] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:49:25.024 [INFO ] [http-nio-8080-exec-1] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:49:25.024 [INFO ] [http-nio-8080-exec-1] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:49:25.026 [DEBUG] [http-nio-8080-exec-1] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:49:25.027 [DEBUG] [http-nio-8080-exec-1] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 112(String)
+2024-05-30 23:49:25.028 [DEBUG] [http-nio-8080-exec-1] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:49:25.425 [INFO ] [http-nio-8080-exec-10] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:49:25.426 [INFO ] [http-nio-8080-exec-10] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:49:25.426 [DEBUG] [http-nio-8080-exec-10] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:49:25.426 [DEBUG] [http-nio-8080-exec-10] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 112(String)
+2024-05-30 23:49:25.427 [DEBUG] [http-nio-8080-exec-10] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:52:28.330 [INFO ] [http-nio-8080-exec-2] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:52:28.331 [INFO ] [http-nio-8080-exec-2] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:52:28.333 [DEBUG] [http-nio-8080-exec-2] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:52:28.334 [DEBUG] [http-nio-8080-exec-2] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 222(String)
+2024-05-30 23:52:28.336 [DEBUG] [http-nio-8080-exec-2] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:52:31.890 [INFO ] [http-nio-8080-exec-3] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:52:31.890 [INFO ] [http-nio-8080-exec-3] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:52:31.892 [DEBUG] [http-nio-8080-exec-3] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:52:31.892 [DEBUG] [http-nio-8080-exec-3] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 222(String)
+2024-05-30 23:52:31.894 [DEBUG] [http-nio-8080-exec-3] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:52:32.413 [INFO ] [http-nio-8080-exec-4] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:52:32.414 [INFO ] [http-nio-8080-exec-4] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:52:32.416 [DEBUG] [http-nio-8080-exec-4] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:52:32.416 [DEBUG] [http-nio-8080-exec-4] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 222(String)
+2024-05-30 23:52:32.417 [DEBUG] [http-nio-8080-exec-4] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:52:32.761 [INFO ] [http-nio-8080-exec-5] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:52:32.762 [INFO ] [http-nio-8080-exec-5] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:52:32.764 [DEBUG] [http-nio-8080-exec-5] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:52:32.767 [DEBUG] [http-nio-8080-exec-5] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 222(String)
+2024-05-30 23:52:32.774 [DEBUG] [http-nio-8080-exec-5] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:52:33.011 [INFO ] [http-nio-8080-exec-6] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:52:33.011 [INFO ] [http-nio-8080-exec-6] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:52:33.013 [DEBUG] [http-nio-8080-exec-6] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:52:33.013 [DEBUG] [http-nio-8080-exec-6] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 222(String)
+2024-05-30 23:52:33.015 [DEBUG] [http-nio-8080-exec-6] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:52:33.211 [INFO ] [http-nio-8080-exec-7] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:52:33.211 [INFO ] [http-nio-8080-exec-7] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:52:33.212 [DEBUG] [http-nio-8080-exec-7] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:52:33.212 [DEBUG] [http-nio-8080-exec-7] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 222(String)
+2024-05-30 23:52:33.213 [DEBUG] [http-nio-8080-exec-7] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:52:33.377 [INFO ] [http-nio-8080-exec-8] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:52:33.378 [INFO ] [http-nio-8080-exec-8] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:52:33.378 [DEBUG] [http-nio-8080-exec-8] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:52:33.379 [DEBUG] [http-nio-8080-exec-8] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 222(String)
+2024-05-30 23:52:33.380 [DEBUG] [http-nio-8080-exec-8] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:52:33.579 [INFO ] [http-nio-8080-exec-9] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:52:33.580 [INFO ] [http-nio-8080-exec-9] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:52:33.581 [DEBUG] [http-nio-8080-exec-9] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:52:33.582 [DEBUG] [http-nio-8080-exec-9] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 222(String)
+2024-05-30 23:52:33.583 [DEBUG] [http-nio-8080-exec-9] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:52:34.174 [INFO ] [http-nio-8080-exec-1] com.anochat_api.handler.ChatHandler.handleTextMessage:50 - メッセージが送信されました
+2024-05-30 23:52:34.174 [INFO ] [http-nio-8080-exec-1] com.anochat_api.logic.ChatLogic.sendChat:24 - start regist chat!!
+2024-05-30 23:52:34.175 [DEBUG] [http-nio-8080-exec-1] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==>  Preparing: INSERT INTO trn_chat_record ( chat_content, create_date ) VALUES ( ?, current_timestamp )
+2024-05-30 23:52:34.176 [DEBUG] [http-nio-8080-exec-1] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - ==> Parameters: 222(String)
+2024-05-30 23:52:34.177 [DEBUG] [http-nio-8080-exec-1] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug:135 - <==    Updates: 1
+2024-05-30 23:53:38.614 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:50 - Starting AnochatApiApplication using Java 17.0.10 with PID 45238 (/home/tatsu/lt_chat/anochat_api/target/classes started by tatsu in /home/tatsu/lt_chat/anochat_api)
+2024-05-30 23:53:38.615 [DEBUG] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarting:51 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-30 23:53:38.615 [INFO ] [restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo:660 - The following 1 profile is active: "develop"
+2024-05-30 23:53:39.007 [INFO ] [restartedMain] org.springframework.boot.StartupInfoLogger.logStarted:56 - Started AnochatApiApplication in 0.435 seconds (process running for 2036.65)
