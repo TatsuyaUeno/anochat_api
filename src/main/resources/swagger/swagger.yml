@@ -1,0 +1,32 @@
+openapi: 3.0.3
+info:
+  title: LT Chat App
+  version: 1.0.11
+paths:
+  /chat/messagelist/{chatid}:
+    get:
+      summary: メッセージ一覧取得
+      parameters:
+        - name: chatid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                type: array
+                required:
+                  - messageid
+                  - message
+                items:
+                  properties:
+                    messageid:
+                      format: int64
+                      example: 1
+                    message:
+                      type: string
+                      example: message
