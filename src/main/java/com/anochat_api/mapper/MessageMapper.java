@@ -9,7 +9,9 @@ import com.anochat_api.dto.MessageDto;
 @Mapper
 public interface MessageMapper {
 
-    List<MessageDto> getMessageList(String chatid);
+    List<MessageDto> getMessageList(int chatid);
 
-    void registMessage(String message);
+    void getMessagesByChatId(String message);
+
+    // List<MessageDto> getMessagesByChatId(int chatid);
 }

@@ -16,12 +16,12 @@ public class MessageDao {
     private MessageMapper messageMapper;
 
     @Transactional
-    public List<MessageDto> findMessageList(String chatid) {
+    public List<MessageDto> findMessageList(int chatid) {
         return messageMapper.getMessageList(chatid);
     }
 
     @Transactional
     public void resistMessage(String message) {
-        messageMapper.registMessage(message);
+        messageMapper.getMessagesByChatId(message);
     }
 }

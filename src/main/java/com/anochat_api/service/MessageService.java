@@ -8,8 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.anochat_api.dao.MessageDao;
 import com.anochat_api.dto.MessageDto;
-import com.anochat_api.mapper.MessageMapper;
 
 @Service
 public class MessageService {
@@ -33,15 +33,15 @@ public class MessageService {
     // ↑TestDaoにあたるものがこれだが、ChatGPTなどや他のもので調べてもDaoを2つ作る意味がわからないので、一旦なしにしている
 
     @Autowired
-    private MessageMapper messageMapper;
+    private MessageDao messageDao;
 
-    public List<MessageDto> getMessageList(String chatid) {
+    public List<MessageDto> getMessageList(int chatid) {
         List<MessageDto> messages = new ArrayList<MessageDto>();
 
         try {
-            messages = messageMapper.getMessageList(chatid);
+            messages = messageDao.findMessageList(chatid); // ここでエラー
         } catch (Exception e) {
-            log.error(chatid, e);
+            log.error(String.valueOf(chatid), e);
         }
 
         return messages;

@@ -6,12 +6,13 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.anochat_api.dto.TestResponseDto;
 import com.anochat_api.service.TestService;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -24,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  * 　・エンドポイント定義
  * 　・レスポンスを返す
  */
-@Controller
+@RestController
 @RequestMapping("/api/test")
 public class TestController {
 
@@ -40,11 +41,18 @@ public class TestController {
         List<TestResponseDto> res = new ArrayList<TestResponseDto>();
         
         try {
+            System.out.println("接続に成功しました");
+            log.info("接続に成功しました");
             res = testService.getUserInfo();
         } catch (Exception e) {
+            System.out.println("予期せぬエラー");
             log.error("予期せぬエラーが発生しました。");
         }
-
         return res;
+    }
+
+    @GetMapping("/test")
+    public String hello() {
+        return "Hello!";
     }
 }
