@@ -1,13 +1,23 @@
 package com.anochat_api.dto;
 
 public class MessageDto {
-    private String chatid;
+    private Integer chatid;
 
     private Integer messageid;
 
     private String message;
 
-    public void setChatid(String chatid) {
+    // デフォルトコンストラクタ
+    public MessageDto() {}
+
+    // すべてのフィールドを初期化するコンストラクタ
+    public MessageDto(Integer chatid, Integer messageid, String message) {
+        this.chatid = chatid;
+        this.messageid = messageid;
+        this.message = message;
+    }
+
+    public void setChatid(Integer chatid) {
         this.chatid = chatid;
     }
 
@@ -19,7 +29,7 @@ public class MessageDto {
         this.message = message;
     }
 
-    public String getChatid() {
+    public Integer getChatid() {
         return this.chatid;
     }
 

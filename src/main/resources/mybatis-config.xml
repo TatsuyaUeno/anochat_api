@@ -1,22 +1,21 @@
-<!-- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-  <environments default="sample_id">
-    <environment id="sample_id">
+  <environments default="development">
+    <environment id="development">
       <transactionManager type="JDBC"/>
       <dataSource type="POOLED">
-        <!-- <property name="driver" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost/test"/>
-        <property name="username" value="test"/>
-        <property name="password" value="test"/> -->
-        <property name="messagemapper" value="true"/>
+        <property name="driver" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://localhost:5432/postgres"/>
+        <property name="username" value="anochat"/>
+        <property name="password" value="icd_anochat"/>
       </dataSource>
     </environment>
   </environments>
   <mappers>
-    <mapper resource="MessageMapper.xml"/>
+    <!-- <mapper resource="com/anochat_api/mapper/ChatMapper.xml"/> -->
+    <mapper resource="com/anochat_api/mapper/MessageMapper.xml"/>
   </mappers>
-</configuration> -->
-<!-- mybatisの設定ファイルを作成した方がよいみたいだが、指定する内容がわかっていない -->
+</configuration>

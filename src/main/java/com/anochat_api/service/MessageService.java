@@ -14,7 +14,7 @@ import com.anochat_api.dto.MessageDto;
 @Service
 public class MessageService {
 
-    private static final Logger log = LoggerFactory.getLogger(TestService.class);
+    private static final Logger log = LoggerFactory.getLogger(MessageService.class);
 
     // @Autowired
     // private MessageDao messageDao;
@@ -39,7 +39,7 @@ public class MessageService {
         List<MessageDto> messages = new ArrayList<MessageDto>();
 
         try {
-            messages = messageDao.findMessageList(chatid); // ここでエラー
+            messages = messageDao.getMessage(chatid); // ここでエラー
         } catch (Exception e) {
             log.error(String.valueOf(chatid), e);
         }

@@ -22,7 +22,7 @@ import com.anochat_api.service.MessageService;
 @RequestMapping("/api/chat/msglist")
 public class MessageController {
     
-    private static final Logger log = LoggerFactory.getLogger(TestController.class);
+    private static final Logger log = LoggerFactory.getLogger(MessageController.class);
 
     @Autowired
     private MessageService messageService;
@@ -34,7 +34,7 @@ public class MessageController {
         try {
             messages = messageService.getMessageList(chatid);
         } catch (Exception e) {
-            log.error("予期せぬエラーが発生しました。");
+            log.error("予期せぬエラーが発生しました。ChatId: " + chatid, e);
         }
 
         return messages;
