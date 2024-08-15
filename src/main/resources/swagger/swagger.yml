@@ -3,7 +3,7 @@ info:
   title: LT Chat App
   version: 1.0.11
 paths:
-  /chat/messagelist/{chatid}:
+  /api/chat/msglist/{chatid}:
     get:
       summary: メッセージ一覧取得
       parameters:
@@ -30,3 +30,61 @@ paths:
                     message:
                       type: string
                       example: message
+
+  /api/chat/register:
+    post:
+      summary: 新規チャット登録
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                chatName:
+                  type: string
+                createDate:
+                  type: string
+                  format: datetime
+                  example: "2023-01-01 00:00:00"
+      responses:
+        200:
+          description: 登録されました。
+        # 400:
+        #   description: validation error
+        # 500:
+        #   description: server error
+  /api/chat/update:
+    put:
+      summary: チャット情報変更
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                chatId: 
+                  type: integer
+                chatName: 
+                  type: string
+                updateDate:
+                  type: string
+                  format: datetime
+                  example: "2023-01-01 00:00:00"
+      responses:
+        200:
+          description: 変更されました。
+
+  /api/chat/delete:
+    delete:
+      summary: チャット削除
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                chatId: 
+                  type: integer
+      responses:
+        200:
+          description: 削除されました。
