@@ -2,6 +2,7 @@ package com.anochat_api.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.anochat_api.dao.MessageDao;
 import com.anochat_api.dto.MessageDto;
+import com.anochat_api.dto.MessageResponseDto;
 
 @Service
 public class MessageService {
@@ -35,16 +37,26 @@ public class MessageService {
     @Autowired
     private MessageDao messageDao;
 
-    public List<MessageDto> getMessageList(int chatid) {
+    public List<MessageResponseDto> getMessageList(int chatid) {
         List<MessageDto> messages = new ArrayList<MessageDto>();
 
         try {
-            messages = messageDao.getMessage(chatid); // ここでエラー
+            messages = messageDao.getMessage(chatid);
         } catch (Exception e) {
             log.error(String.valueOf(chatid), e);
         }
 
-        return messages;
+        return messages.stream()
+                .map(this::formatMessage)
+                .collect(Collectors.toList());
         // return messageMapper.getMessageList(chatid);
+    }
+
+    private MessageResponseDto formatMessage(MessageDto message) {
+        MessageResponseDto responseDto = new MessageResponseDto();
+        responseDto.setChatid(message.getChatid());
+        responseDto.setMessageid(message.getMessageid());
+        responseDto.setMessage(message.getMessage());
+        return responseDto;
     }
 }

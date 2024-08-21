@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.anochat_api.dto.MessageDto;
+import com.anochat_api.dto.MessageResponseDto;
 import com.anochat_api.service.MessageService;
 
 
@@ -28,8 +28,8 @@ public class MessageController {
     private MessageService messageService;
 
     @GetMapping("/{chatid}")
-    public List<MessageDto> getMessageList(@PathVariable int chatid) {
-        List<MessageDto> messages = new ArrayList<MessageDto>();
+    public List<MessageResponseDto> getMessageList(@PathVariable int chatid) {
+        List<MessageResponseDto> messages = new ArrayList<MessageResponseDto>();
 
         try {
             messages = messageService.getMessageList(chatid);
