@@ -3,7 +3,7 @@
 <mapper namespace="com.anochat_api.mapper.ChatMapper">
 	<insert id="registChat" parameterType="java.lang.String">
 		INSERT INTO
-			trn_chat_record
+			trn_chat_message
 		(
 			chat_content,
 			create_date

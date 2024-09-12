@@ -1,13 +1,14 @@
 package com.anochat_api.dao;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-// import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.anochat_api.dto.MessageDto;
+import com.anochat_api.dto.MessageResponseDto;
 import com.anochat_api.mapper.MessageMapper;
 
 @Repository
@@ -16,13 +17,15 @@ public class MessageDao {
     @Autowired
     private MessageMapper messageMapper;
 
-    // @Transactional 更新・削除APIでは必要らしい
-    // public List<MessageDto> findMessageList(int chatid) {
-    //     return messageMapper.getMessageList(chatid);
-    // }
+    @Transactional
+    public List<MessageDto> findMessageList(int chatid) {
+        return messageMapper.getMessagesByChatId(chatid);
+    }
 
-    // @Transactional
-    public List<MessageDto> getMessage(int chatid) {
+    @Transactional(rollbackFor=Exception.class, propagation=Propagation.REQUIRED)
+    public List<MessageDto> getMessage(Integer chatid) {
+
+        
 
         // DBなし動作確認用
         // List<MessageDto> result = new ArrayList<>();
@@ -32,6 +35,6 @@ public class MessageDao {
         // result.add(data2);
         // return result;
 
-        return messageMapper.getMessagesByChatId(chatid);
+        return messageMapper.getMessagesByChatId(chatid); // ここでnull！Mapperの処理は通っていないみたい
     }
 }

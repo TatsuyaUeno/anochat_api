@@ -1,31 +1,33 @@
 package com.anochat_api.dto;
 
+import java.time.LocalDateTime;
+
 public class MessageResponseDto {
-    private Integer chatid;
-    private Integer messageid;
-    private String message;
+    private Integer chatListId;
+    private String content;
+    private LocalDateTime date;
 
-    public Integer getChatid() {
-        return chatid;
+    public Integer getChatListId() {
+        return chatListId;
     }
 
-    public Integer getMessageid() {
-        return messageid;
+    public String getContent() {
+        return content;
     }
 
-    public String getMessage() {
-        return message;
+    public LocalDateTime getDate() {
+        return date;
     }
 
-    public void setChatid(Integer chatid) {
-        this.chatid = chatid;
+    public void setChatListId(Integer chatListId) {
+        this.chatListId = chatListId;
     }
 
-    public void setMessageid(Integer messageid) {
-        this.messageid = messageid;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setDate(LocalDateTime date) {
+        this.date = date;
     }
 }

@@ -8,6 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.anochat_api.dao.MessageDao;
 import com.anochat_api.dto.MessageDto;
@@ -37,26 +39,27 @@ public class MessageService {
     @Autowired
     private MessageDao messageDao;
 
-    public List<MessageResponseDto> getMessageList(int chatid) {
+    @Transactional(rollbackFor=Exception.class, propagation=Propagation.REQUIRES_NEW)
+    public List<MessageResponseDto> getMessageList(Integer chatid) {
         List<MessageDto> messages = new ArrayList<MessageDto>();
 
         try {
-            messages = messageDao.getMessage(chatid);
+            messages = messageDao.getMessage(chatid); // nullになっている！
         } catch (Exception e) {
             log.error(String.valueOf(chatid), e);
         }
 
         return messages.stream()
-                .map(this::formatMessage)
+                .map(this::convertToResponseDto)
                 .collect(Collectors.toList());
         // return messageMapper.getMessageList(chatid);
     }
 
-    private MessageResponseDto formatMessage(MessageDto message) {
+    private MessageResponseDto convertToResponseDto(MessageDto messageDto) {
         MessageResponseDto responseDto = new MessageResponseDto();
-        responseDto.setChatid(message.getChatid());
-        responseDto.setMessageid(message.getMessageid());
-        responseDto.setMessage(message.getMessage());
+        responseDto.setChatListId(messageDto.getChatid());
+        responseDto.setContent(messageDto.getMessage());
+        responseDto.setDate(messageDto.getDate());
         return responseDto;
     }
 }

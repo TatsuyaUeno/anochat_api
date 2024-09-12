@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.anochat_api.mapper.MessageMapper">
-	<select id="getMessagesByChatId" parameterType="int">
+	<select id="getMessagesByChatId" parameterType="int" resultType="com.anochat_api.dto.MessageDto">
 		SELECT * FROM
-			trn_chat_record
+			trn_chat_message
 		WHERE
 			chat_id = #{chatid}
 	</select>
