@@ -1,56 +1,54 @@
 package com.anochat_api.dto;
 
-import java.time.LocalDateTime;
-
 public class ChatDto {
-    private Integer chatid;
+    private Integer chatId;
 
     private String chatName;
 
-    private LocalDateTime createDate;
+    private String chatDate;
 
-    private LocalDateTime updateDate;
+    private String updateDate;
 
     // デフォルトコンストラクタ
     public ChatDto() {}
 
     // すべてのフィールドを初期化するコンストラクタ
-    public ChatDto(Integer chatid, String chatName, LocalDateTime createDate, LocalDateTime updateDate) {
-        this.chatid = chatid;
+    public ChatDto(Integer chatId, String chatName, String chatDate, String updateDate) {
+        this.chatId = chatId;
         this.chatName = chatName;
-        this.createDate = createDate;
+        this.chatDate = chatDate;
         this.updateDate = updateDate;
     }
 
-    public void setChatid(Integer chatid) {
-        this.chatid = chatid;
+    public void setChatId(Integer chatId) {
+        this.chatId = chatId;
     }
 
     public void setChatName(String chatName) {
         this.chatName = chatName;
     }
 
-    public void setCreateDate(LocalDateTime createDate) {
-        this.createDate = createDate;
+    public void setChatDate(String chatDate) {
+        this.chatDate = chatDate;
     }
 
-    public void setUpdateDate(LocalDateTime updateDate) {
+    public void setUpdateDate(String updateDate) {
         this.updateDate = updateDate;
     }
 
-    public Integer getChatid() {
-        return this.chatid;
+    public Integer getChatId() {
+        return this.chatId;
     }
 
     public String getChatName() {
         return this.chatName;
     }
 
-    public LocalDateTime getCreateDate() {
-        return this.createDate;
+    public String getChatDate() {
+        return this.chatDate;
     }
 
-    public LocalDateTime getUpdateDate() {
+    public String getUpdateDate() {
         return this.updateDate;
     }
 
