@@ -1,56 +1,54 @@
 package com.anochat_api.dto;
 
-import java.time.LocalDateTime;
-
 public class MessageDto {
-    private Integer msg_id;
+    private Integer msgId;
 
-    private Integer chat_id;
+    private Integer chatId;
 
-    private String msg_content;
+    private String msgContent;
 
-    private LocalDateTime send_time;
+    private String sendTime;
 
     // デフォルトコンストラクタ
     public MessageDto() {}
 
     // すべてのフィールドを初期化するコンストラクタ
-    public MessageDto(Integer chatid, Integer messageid, String message, LocalDateTime date) {
-        this.chat_id = chatid;
-        this.msg_id = messageid;
-        this.msg_content = message;
-        this.send_time = date;
+    public MessageDto(Integer chatid, Integer messageid, String message, String date) {
+        this.chatId = chatid;
+        this.msgId = messageid;
+        this.msgContent = message;
+        this.sendTime = date;
     }
 
     public void setChatid(Integer chatid) {
-        this.chat_id = chatid;
+        this.chatId = chatid;
     }
 
     public void setMessageid(Integer messageid) {
-        this.msg_id = messageid;
+        this.msgId = messageid;
     }
 
     public void setMessage(String message) {
-        this.msg_content = message;
+        this.msgContent = message;
     }
 
-    public void setDate(LocalDateTime date) {
-        this.send_time = date;
+    public void setDate(String date) {
+        this.sendTime = date;
     }
 
     public Integer getChatid() {
-        return this.chat_id;
+        return this.chatId;
     }
 
     public Integer getMessageid() {
-        return this.msg_id;
+        return this.msgId;
     }
 
     public String getMessage() {
-        return this.msg_content;
+        return this.msgContent;
     }
 
-    public LocalDateTime getDate() {
-        return this.send_time;
+    public String getDate() {
+        return this.sendTime;
     }
 }

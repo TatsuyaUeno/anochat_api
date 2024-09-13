@@ -20,22 +20,6 @@ public class MessageService {
 
     private static final Logger log = LoggerFactory.getLogger(MessageService.class);
 
-    // @Autowired
-    // private MessageDao messageDao;
-
-    // public List<MessageDto> getMessageList() {
-    //     List<MessageDto> messages = new ArrayList<MessageDto>();
-
-    //     try {
-    //         messages = messageDao.getMessageList();
-    //     } catch (Exception e) {
-    //         log.error("データベース接続でエラーが発生しました。");
-    //     }
-
-    //     return messages;
-    // }
-    // ↑TestDaoにあたるものがこれだが、ChatGPTなどや他のもので調べてもDaoを2つ作る意味がわからないので、一旦なしにしている
-
     @Autowired
     private MessageDao messageDao;
 
@@ -44,7 +28,7 @@ public class MessageService {
         List<MessageDto> messages = new ArrayList<MessageDto>();
 
         try {
-            messages = messageDao.getMessage(chatid); // nullになっている！
+            messages = messageDao.getMessage(chatid);
         } catch (Exception e) {
             log.error(String.valueOf(chatid), e);
         }
@@ -52,14 +36,12 @@ public class MessageService {
         return messages.stream()
                 .map(this::convertToResponseDto)
                 .collect(Collectors.toList());
-        // return messageMapper.getMessageList(chatid);
     }
 
     private MessageResponseDto convertToResponseDto(MessageDto messageDto) {
         MessageResponseDto responseDto = new MessageResponseDto();
-        responseDto.setChatListId(messageDto.getChatid());
-        responseDto.setContent(messageDto.getMessage());
-        responseDto.setDate(messageDto.getDate());
+        responseDto.setMessage(messageDto.getMessage());
+        responseDto.setSort(messageDto.getDate());
         return responseDto;
     }
 }

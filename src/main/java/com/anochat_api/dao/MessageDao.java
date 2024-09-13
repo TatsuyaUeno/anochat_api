@@ -25,16 +25,6 @@ public class MessageDao {
     @Transactional(rollbackFor=Exception.class, propagation=Propagation.REQUIRED)
     public List<MessageDto> getMessage(Integer chatid) {
 
-        
-
-        // DBなし動作確認用
-        // List<MessageDto> result = new ArrayList<>();
-        // MessageDto data1 = new MessageDto(101, 1, "message");
-        // MessageDto data2 = new MessageDto(101, 2, "testmsg");
-        // result.add(data1);
-        // result.add(data2);
-        // return result;
-
-        return messageMapper.getMessagesByChatId(chatid); // ここでnull！Mapperの処理は通っていないみたい
+        return messageMapper.getMessagesByChatId(chatid);
     }
 }
