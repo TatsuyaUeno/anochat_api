@@ -17,11 +17,6 @@ public class MessageDao {
     @Autowired
     private MessageMapper messageMapper;
 
-    @Transactional
-    public List<MessageDto> findMessageList(int chatid) {
-        return messageMapper.getMessagesByChatId(chatid);
-    }
-
     @Transactional(rollbackFor=Exception.class, propagation=Propagation.REQUIRED)
     public List<MessageDto> getMessage(Integer chatid) {
 
