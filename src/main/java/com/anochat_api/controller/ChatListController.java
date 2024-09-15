@@ -1,5 +1,8 @@
 package com.anochat_api.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.text.html.parser.Entity;
 
 import org.slf4j.Logger;
@@ -13,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.anochat_api.dto.ChatListResponseDto;
 import com.anochat_api.dto.CreateChatRequest;
 import com.anochat_api.service.ChatService;
 
@@ -21,26 +25,28 @@ import com.anochat_api.service.ChatService;
  */
 
 @RestController
-@RequestMapping("/api/chat")
-public class ChatController {
+@RequestMapping("/api/chatList")
+public class ChatListController {
     
-    private static final Logger log = LoggerFactory.getLogger(ChatController.class);
+    private static final Logger log = LoggerFactory.getLogger(ChatListController.class);
 
     // 扱うデータを定義
     @Autowired
     private ChatService chatService;
 
-    // @PostMapping("/create")
-    // public ResponseEntity<String> createNewChat(@RequestBody CreateChatRequest createChatRequest) {
-        
-        // int newChatId = chatService.createNewChat(createChatRequest);
+    @PostMapping("/getChatList")
+    public List<ChatListResponseDto> getChatList() {
+    // public List<ChatListResponseDto> getChatList(@RequestBody CreateChatRequest chatRequest) {
+        List<ChatListResponseDto> chatList = new ArrayList<ChatListResponseDto>();
+
+        try {
+            chatList = chatService.getChatList();
+        } catch (Exception e) {
+            log.error("予期せぬエラーが発生しました。", e);  
+        }
 
         // return ResponseEntity.ok("Chat created with ID: " + newChatId);
-        
-        // @PutMapping("/update")
-        
-        
-        // @DeleteMapping("/delete")
-        
-    // }
+     
+        return chatList;
+    }
 }

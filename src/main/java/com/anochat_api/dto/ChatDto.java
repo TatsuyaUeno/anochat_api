@@ -1,5 +1,6 @@
 package com.anochat_api.dto;
 
+// テーブルと一致
 public class ChatDto {
     private Integer chatId;
 

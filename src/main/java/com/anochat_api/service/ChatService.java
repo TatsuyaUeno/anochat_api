@@ -12,8 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.anochat_api.dao.ChatDao;
-import com.anochat_api.dao.NewChatDao;
+import com.anochat_api.dao.ChatListDao;
 import com.anochat_api.dto.ChatDto;
 import com.anochat_api.dto.ChatListResponseDto;
 
@@ -23,23 +22,21 @@ public class ChatService {
     private static final Logger log = LoggerFactory.getLogger(ChatService.class);
 
     @Autowired
-    private ChatDao chatDao;
+    private ChatListDao chatListDao;
 
     @Transactional(rollbackFor=Exception.class, propagation=Propagation.REQUIRES_NEW)
-    public List<ChatListResponseDto> createNewChat(String chatName, LocalDateTime createDate) {
+    public List<ChatListResponseDto> getChatList() {
         List<ChatDto> chatList = new ArrayList<ChatDto>();
-        // String res = new String();
 
         try {
-            // chatList = chatDao.getChatList(chatName, createDate);
+            chatList = chatListDao.getChatList();
         } catch (Exception e) {
-            log.error(chatName, e);
+            log.error(String.valueOf(e));
         }
 
         return chatList.stream()
                 .map(this::convertToChatListResponseDto)
                 .collect(Collectors.toList());
-
     }
     
     private ChatListResponseDto convertToChatListResponseDto(ChatDto chatDto) {
