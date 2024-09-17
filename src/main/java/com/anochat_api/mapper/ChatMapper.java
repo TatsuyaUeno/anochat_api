@@ -10,5 +10,5 @@ public interface ChatMapper {
     /* サンプル用 */
     List<TestResponseDto> getUserInfo();
 
-    void registChat(String message);
+    void registChat(Integer chatId, String message);
 }

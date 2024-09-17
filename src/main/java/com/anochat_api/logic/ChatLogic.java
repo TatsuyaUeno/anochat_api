@@ -19,12 +19,12 @@ public class ChatLogic {
     /** ログ */
     private static final Logger log = LoggerFactory.getLogger(ChatLogic.class);
 
-    public void sendChat(TextMessage message, List<WebSocketSession> sessions) {
+    public void sendChat(Integer chatId, TextMessage message, List<WebSocketSession> sessions) {
         String messageString = message.getPayload();
         log.info("start regist chat!!");
         try {
             // DB登録
-            chatDao.resistChat(messageString);
+            chatDao.resistChat(chatId, messageString);
 
             // 全員にメッセージを返却
             for (WebSocketSession s: sessions) {

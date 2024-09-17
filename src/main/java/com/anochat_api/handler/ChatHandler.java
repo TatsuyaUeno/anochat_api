@@ -12,6 +12,7 @@ import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 import com.anochat_api.logic.ChatLogic;
+import com.anochat_api.util.SaveChatId;
 
 /**
  * WebSocketに接続した際呼び出される
@@ -28,6 +29,8 @@ public class ChatHandler extends TextWebSocketHandler  {
     /** チャットLogic */
     @Autowired
     private ChatLogic chatLogic;
+    @Autowired
+    private SaveChatId saveChatId;
 
     /** ログ */
     private static final Logger log = LoggerFactory.getLogger(ChatHandler.class);
@@ -46,8 +49,9 @@ public class ChatHandler extends TextWebSocketHandler  {
     @Override
     public void handleTextMessage(WebSocketSession session, TextMessage message) {
         try {
+            Integer chatId = saveChatId.getChatId();
             log.info("メッセージが送信されました");
-            chatLogic.sendChat(message, sessions);
+            chatLogic.sendChat(chatId, message, sessions);
         } catch (Exception e) {
             log.error("予期せぬエラーが発生しました", e);;
         }

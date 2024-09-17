@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.anochat_api.dto.MessageRequestDto;
 import com.anochat_api.dto.MessageResponseDto;
 import com.anochat_api.service.MessageService;
-
+import com.anochat_api.util.SaveChatId;
 
 /**
  * メッセージ一覧取得
@@ -27,6 +27,8 @@ public class MessageController {
 
     @Autowired
     private MessageService messageService;
+    @Autowired
+    private SaveChatId saveChatId;
 
     @PostMapping("/getChatMessage")
     public List<MessageResponseDto> getMessageList(@RequestBody MessageRequestDto messageResponseDto) {  
@@ -34,6 +36,7 @@ public class MessageController {
 
         try {  
             Integer chatid = messageResponseDto.getChatid();
+            saveChatId.setChatId(chatid);
             messages = messageService.getMessageList(chatid);
         } catch (Exception e) {  
             log.error("予期せぬエラーが発生しました。ChatId: " + messageResponseDto.getChatid(), e);  

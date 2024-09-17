@@ -14,7 +14,7 @@ public class ChatDao {
     private ChatMapper chatMapper;
 
     @Transactional
-    public void resistChat(String message) {
-        chatMapper.registChat(message);
+    public void resistChat(Integer chatId, String message) {
+        chatMapper.registChat(chatId, message);
     }
 }
