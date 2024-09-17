@@ -10,5 +10,7 @@
 		FROM trn_chat_message
 		WHERE
 			chat_id = #{chatid}
+		ORDER BY
+			msg_id desc
 	</select>
 </mapper>
