@@ -9,4 +9,10 @@
 			TO_CHAR(update_date, 'yyyy/mm/dd') as update_date
 		FROM trn_chat
 	</select>
+	<update id="updateChatList" parameterType="com.anochat_api.dto.ChatUpdateReqDto">
+		UPDATE trn_chat
+		SET chat_name = #{chatName},
+				chat_date = #{chatDate}
+		WHERE chat_id = #{chatId}
+	</update>
 </mapper>

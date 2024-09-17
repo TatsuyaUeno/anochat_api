@@ -1,5 +1,6 @@
 package com.anochat_api.mapper;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
@@ -10,4 +11,6 @@ import com.anochat_api.dto.ChatDto;
 public interface ChatListMapper {
 
 	List<ChatDto> getChatList();
+
+	void updateChatList(Integer chatId, String chatName, LocalDateTime chatDate);
 }

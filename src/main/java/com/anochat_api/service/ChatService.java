@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.anochat_api.dao.ChatListDao;
 import com.anochat_api.dto.ChatDto;
 import com.anochat_api.dto.ChatListResponseDto;
+// import com.anochat_api.dto.ChatUpdateReqDto;
 
 @Service
 public class ChatService {
@@ -37,6 +38,24 @@ public class ChatService {
         return chatList.stream()
                 .map(this::convertToChatListResponseDto)
                 .collect(Collectors.toList());
+    }
+
+    @Transactional(rollbackFor=Exception.class, propagation=Propagation.REQUIRES_NEW)
+    public void updateChatList(Integer chatId, String chatName, LocalDateTime chatDate) {
+    // public List<ChatListResponseDto> updateChatList(Integer chatId, String chatName, LocalDateTime chatDate) {
+        // List<ChatDto> chatList = new ArrayList<ChatDto>();
+
+        try {
+            chatListDao.updateChatList(chatId, chatName, chatDate);
+            // chatList = chatListDao.getChatList();
+        } catch (Exception e) {
+            log.error(String.valueOf(e));
+            throw e;
+        }
+
+        // return chatList.stream()
+        //         .map(this::convertToChatListResponseDto)
+        //         .collect(Collectors.toList());
     }
     
     private ChatListResponseDto convertToChatListResponseDto(ChatDto chatDto) {

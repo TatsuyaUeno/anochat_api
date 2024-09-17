@@ -15,7 +15,8 @@
     </environment>
   </environments>
   <mappers>
-    <!-- <mapper resource="com/anochat_api/mapper/ChatMapper.xml"/> -->
+    <!-- <mapper resource="com/anochat_api/mapper/ChatUpdateMapper.xml"/> -->
+    <mapper resource="com/anochat_api/mapper/ChatMapper.xml"/>
     <mapper resource="com/anochat_api/mapper/MessageMapper.xml"/>
   </mappers>
 </configuration>

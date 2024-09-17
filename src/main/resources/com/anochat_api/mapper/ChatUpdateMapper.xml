@@ -1,0 +1,10 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.anochat_api.mapper.ChatListMapper">
+	<update id="updateChatList" parameterType="com.anochat_api.dto.ChatUpdateReqDto" resultType="com.anochat_api.dto.ChatDto">
+		UPDATE trn_chat
+		SET chat_name = #{chatName},
+				chat_date = #{chatDate}
+		WHERE chat_id = #{chatId}
+	</update>
+</mapper> -->
