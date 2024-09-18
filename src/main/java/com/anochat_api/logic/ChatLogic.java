@@ -27,8 +27,15 @@ public class ChatLogic {
             chatDao.resistChat(chatId, messageString);
 
             // 全員にメッセージを返却
-            for (WebSocketSession s: sessions) {
-                s.sendMessage(message);
+            // for (WebSocketSession s: sessions) {
+            //     s.sendMessage(message);
+            // }
+
+            Set<WebSocketSession> sessions = chatRooms.get(chatId);
+            if (sessions != null) {
+                for (WebSocketSession session : sessions) {
+                    session.sendMessage(new TextMessage(message));
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();

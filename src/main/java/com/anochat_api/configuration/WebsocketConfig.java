@@ -21,9 +21,12 @@ public class WebsocketConfig implements WebSocketConfigurer  {
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(chatHandler(), "/ws-connect")	// 「通信ハンドラー」と「初回接続パス」の設定
+        registry.addHandler(chatHandler(), "/ws-connect/chat")	// 「通信ハンドラー」と「初回接続パス」の設定
                 .setAllowedOrigins("localhost:8080")			// CORSの設定
                 .withSockJS();									// SockJSを有効にする
+        // // WebSocketのエンドポイントを設定。"/chat"がエンドポイント
+        // registry.addHandler(new ChatWebSocketHandler(), "/chat")
+        //         .setAllowedOrigins("*");  // CORSの設定（必要に応じて調整）
     }
 
     /**
