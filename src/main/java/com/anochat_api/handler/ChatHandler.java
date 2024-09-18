@@ -57,12 +57,12 @@ public class ChatHandler extends TextWebSocketHandler  {
         // クエリパラメータからchatIdを取得
         Integer chatId = getChatIdFromSession(session);
         if (chatId == null) {
-            sesshion.close(CloseStatus.BAD_DATA);
+            session.close(CloseStatus.BAD_DATA);
             return;
         }
-        sessionChatIdMap.put(session, chatIs);
+        sessionChatIdMap.put(session, chatId);
         chatRooms.putIfAbsent(chatId, new HashSet<>());
-        chatRooms.get(chatId).add(sesshion);
+        chatRooms.get(chatId).add(session);
     	// sessions.add(session);
         System.out.println("WebSocketの接続が確立しました。" + chatId);
     }
@@ -77,7 +77,7 @@ public class ChatHandler extends TextWebSocketHandler  {
         Integer chatId = sessionChatIdMap.get(session);
 
         if (chatId == null) {
-            sesshion.close(CloseStatus.BAD_DATA);
+            session.close(CloseStatus.BAD_DATA);
             return;
         }
 
@@ -96,14 +96,28 @@ public class ChatHandler extends TextWebSocketHandler  {
             //     chatRooms.get(chatId).add(session);
             // } else if ("message".equals(action)) {
             //     // メッセージ送信
-            //     String chatMessage = (String) messageData.get("message");
-                // broadcastToChatRoom(chatId, chatMessage);
+                String chatMessage = (String) messageData.get("message");
+                broadcastToChatRoom(chatId, chatMessage);
             // }
         } catch (Exception e) {
             log.error("予期せぬエラーが発生しました", e);;
         }
     }
 
+    private Integer getChatIdFromSession(WebSocketSession session) {
+        // クエリパラメータからchatIdを取得
+        String query = session.getUri().getQuery();
+        if (query != null && query.contains("chatId")) {
+            String[] params = query.split("&");
+            for (String param : params) {
+                String[] keyValue = param.split("=");
+                if ("chatId".equals(keyValue[0])) {
+                    return Integer.valueOf(keyValue[1]);
+                }
+            }
+        }
+        return null;
+    }
 
     // 特定のチャットルームにメッセージをブロードキャスト
     private void broadcastToChatRoom(Integer chatId, String message) throws Exception {

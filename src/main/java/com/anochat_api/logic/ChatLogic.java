@@ -31,12 +31,12 @@ public class ChatLogic {
             //     s.sendMessage(message);
             // }
 
-            Set<WebSocketSession> sessions = chatRooms.get(chatId);
-            if (sessions != null) {
-                for (WebSocketSession session : sessions) {
-                    session.sendMessage(new TextMessage(message));
-                }
-            }
+            // Set<WebSocketSession> sessions = chatRooms.get(chatId);
+            // if (sessions != null) {
+            //     for (WebSocketSession session : sessions) {
+            //         session.sendMessage(new TextMessage(message));
+            //     }
+            // }
         } catch (Exception e) {
             e.printStackTrace();
         }
